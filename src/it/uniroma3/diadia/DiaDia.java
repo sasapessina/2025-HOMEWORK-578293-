@@ -1,3 +1,4 @@
+package it.uniroma3.diadia;
 
 
 import java.util.Scanner;
@@ -29,9 +30,12 @@ public class DiaDia {
 	static final private String[] elencoComandi = {"vai", "aiuto", "fine"};
 
 	private Partita partita;
+	
+	private Labirinto labirinto;
 
 	public DiaDia() {
-		this.partita = new Partita();
+		this.labirinto = new Labirinto();
+		this.partita = new Partita(labirinto);
 	}
 
 	public void gioca() {
@@ -44,7 +48,6 @@ public class DiaDia {
 			istruzione = scannerDiLinee.nextLine();
 		while (!processaIstruzione(istruzione));
 	}   
-
 
 	/**
 	 * Processa una istruzione 

@@ -1,3 +1,4 @@
+package it.uniroma3.diadia;
 
 
 
@@ -97,6 +98,11 @@ public class Stanza {
     public Attrezzo[] getAttrezzi() {
         return this.attrezzi;
     }
+    
+    /**Restituisce il numero di attrezzi*/
+    public int getNumeroAttrezzi() {
+    	return this.numeroAttrezzi;
+    }
 
     /**
      * Mette un attrezzo nella stanza.
@@ -180,5 +186,9 @@ public class Stanza {
 	    	direzioni[i] = this.direzioni[i];
 	    return direzioni;
     }
+	
+	public void impostaMAXCAP(Stanza stanza) {
+		this.numeroAttrezzi = 10;
+	}
 
 }
